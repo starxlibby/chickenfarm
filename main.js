@@ -77,7 +77,7 @@ function refreshData(){
     updateSellPrice()
 	updateSnailmasterPrice()
     var prldoc=document.getElementById('playerreflink')
-    prldoc.textContent=window.location.origin+"?ref="+web3.eth.accounts[0]
+    prldoc.textContent="https://snailking.github.io/snailfarm/"?ref="+web3.eth.accounts[0]
     var copyText = document.getElementById("copytextthing");
     copyText.value=prldoc.textContent
 }
