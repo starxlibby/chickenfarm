@@ -76,6 +76,7 @@ function refreshData(){
     updateBuyPrice()
     updateSellPrice()
 	updateSnailmasterPrice()
+	updateCurrentSnailmaster()
     var prldoc=document.getElementById('playerreflink')
     prldoc.textContent=window.location+"?ref="+web3.eth.accounts[0]
     var copyText = document.getElementById("copytextthing");
@@ -139,6 +140,12 @@ function updateSnailmasterPrice(){
     var snailmasterpricedoc=document.getElementById('snailmasterprice')
     //eggstobuydoc.textContent='?'
 	snailmasterpricedoc.textContent=getSnailmasterReq()
+}
+
+function updateCurrentSnailmaster(){
+    var currentsnailmasterdoc=document.getElementById('currentsnailmaster')
+    //eggstobuydoc.textContent='?'
+	currentsnailmaster.textContent=ceoAddress()
 }
 
 function getFreeShrimp2(){
