@@ -679,7 +679,7 @@ function getSnailmasterReq(callback){
     function(error,result){
         if(!error){
             console.log('getSnailmasterReq',result);
-            callback(web3.toDecimal(result))
+            callback(result)
         }
         else{
             console.log('error :(')
