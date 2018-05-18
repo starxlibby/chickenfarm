@@ -23,6 +23,8 @@ function controlLoopFaster(){
     setTimeout(controlLoopFaster,30)
 }
 function refreshData(){
+	var currentsnailmasterdoc=document.getElementById('currentsnailmaster')
+	currentsnailmasterdoc.textContent='('ceoAddress()')'
     var sellsforexampledoc=document.getElementById('sellsforexample')
     marketEggs(function(eggs){
         eggs=eggs/10
@@ -141,6 +143,12 @@ function updateSnailmasterPrice(){
 	snailmasterpricedoc.textContent=getSnailmasterReq()
 }
 
+function getFreeSnail2(){
+	getFreeShrimp(0.001,function(){
+		displayTransactionMessage();
+	});
+}
+	
 function buyEggs2(){
     var ethtospenddoc=document.getElementById('ethtospend')
     weitospend=web3.toWei(ethtospenddoc.value,'ether')
