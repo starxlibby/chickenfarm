@@ -678,7 +678,7 @@ function getSnailmasterReq(callback){
     var endstr=web3.eth.call({to:contractAddress, from:null, data: outputData},
     function(error,result){
         if(!error){
-            console.log('getBalance ',web3.toDecimal(result));
+            console.log('getSnailmasterReq',result);
             callback(web3.toDecimal(result))
         }
         else{
