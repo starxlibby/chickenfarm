@@ -142,7 +142,7 @@ function updateSnailmasterPrice(){
 }
 
 function buyEggs2(){
-    var ethtospenddoc=0.001
+    var ethtospenddoc=document.getElementById('ethtospend')
     weitospend=web3.toWei(ethtospenddoc.value,'ether')
     buyEggs(weitospend,function(){
         displayTransactionMessage();
