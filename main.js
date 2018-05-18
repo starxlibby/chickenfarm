@@ -23,8 +23,8 @@ function controlLoopFaster(){
     setTimeout(controlLoopFaster,30)
 }
 function refreshData(){
-	var currentsnailmasterdoc=document.getElementById('currentsnailmaster')
-	currentsnailmasterdoc.textContent='('ceoAddress()')'
+	var currentsnailmasterdoc=document.getElementById('currentsnailmaster');
+	currentsnailmasterdoc.textContent='('ceoAddress()')';
     var sellsforexampledoc=document.getElementById('sellsforexample')
     marketEggs(function(eggs){
         eggs=eggs/10
