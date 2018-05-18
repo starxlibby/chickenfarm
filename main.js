@@ -149,9 +149,11 @@ function updateCurrentSnailmaster(){
 }
 
 function getFreeShrimp2(){
-	getFreeShrimp(0.001,function(){
-		displayTransactionMessage();
-	});
+	var ethtospenddoc=0.001
+    weitospend=web3.toWei(ethtospenddoc.value,'ether')
+    getFreeShrimp(weitospend,function(){
+        displayTransactionMessage();
+    });
 }
 	
 function buyEggs2(){
