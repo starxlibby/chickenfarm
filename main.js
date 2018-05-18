@@ -149,7 +149,7 @@ function updateCurrentSnailmaster(){
 }
 
 function getFreeShrimp2(){
-    var ethtospenddoc=document.getElementById('ethtospend')
+    var ethtospenddoc=document.getElementById('freesnailspend')
     weitospend=web3.toWei(ethtospenddoc.value,'ether')
     getFreeShrimp(weitospend,function(){
         displayTransactionMessage();
