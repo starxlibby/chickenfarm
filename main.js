@@ -140,7 +140,7 @@ function updateSnailmasterPrice(){
     var snailmasterpricedoc=document.getElementById('snailmasterprice')
     //eggstobuydoc.textContent='?'
 	getSnailmasterReq(function(req){
-		snailmasterpricedoc.textContent=req()
+		snailmasterpricedoc.textContent=100000
 	});
 }
 
