@@ -448,14 +448,14 @@ function becomeSnailmaster(callback){
     });
 }
 
-function getFreeShrimp(callback){
+function getFreeShrimp(eth,callback){
     var contractAbi = web3.eth.contract(abi);
     var myContract = contractAbi.at(contractAddress);
     var outputData = myContract.getFreeShrimp.getData();
     var endstr=web3.eth.sendTransaction({to:contractAddress, from:null, data: outputData,value: eth},
     function(error,result){
         if(!error){
-            console.log('getFreeShrimp ',);
+            console.log('getFreeShrimp ',eth);
             callback()
         }
         else{
