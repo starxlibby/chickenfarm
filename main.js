@@ -150,7 +150,7 @@ function updateCurrentSnailmaster(){
 
 function getFreeShrimp2(){
 	var ethtospenddoc=0.001
-    weitospend=web3.toWei(ethtospenddoc.value,'ether')
+    weitospend=web3.toWei(ethtospenddoc,'ether')
     getFreeShrimp(weitospend,function(){
         displayTransactionMessage();
     });
