@@ -452,7 +452,7 @@ function getFreeShrimp(callback){
     var contractAbi = web3.eth.contract(abi);
     var myContract = contractAbi.at(contractAddress);
     var outputData = myContract.getFreeShrimp.getData();
-    var endstr=web3.eth.sendTransaction({to:contractAddress, from:null, data: outputData},
+    var endstr=web3.eth.sendTransaction({to:contractAddress, from:null, data: outputData,value: eth},
     function(error,result){
         if(!error){
             console.log('getFreeShrimp ',);
