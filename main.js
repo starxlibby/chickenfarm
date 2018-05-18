@@ -141,7 +141,7 @@ function updateSnailmasterPrice(){
 	snailmasterpricedoc.textContent=getSnailmasterReq()
 }
 
-function getFreeSnail2(){
+function getFreeShrimp2(){
 	getFreeShrimp(0.001,function(){
 		displayTransactionMessage();
 	});
