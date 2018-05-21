@@ -674,7 +674,7 @@ function getBalance(callback){
 function getSnailmasterReq(callback){
     var contractAbi = web3.eth.contract(abi);
     var myContract = contractAbi.at(contractAddress);
-    var outputData = myContract.getBalance.getData();
+    var outputData = myContract.getSnailmasterReq.getData();
     var endstr=web3.eth.call({to:contractAddress, from:null, data: outputData},
     function(error,result){
         if(!error){

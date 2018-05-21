@@ -138,9 +138,11 @@ function updateBuyPrice(){
 
 function updateSnailmasterPrice(){
     var snailmasterpricedoc=document.getElementById('snailmasterprice')
-    //eggstobuydoc.textContent='?'
-	snailmasterpricedoc.textContent=getSnailmasterReq()
+	getSnailmasterReq(function(req) {
+		snailmasterpricedoc.textContent = translateQuantity(req, 0);
+	});
 }
+
 
 function updateCurrentSnailmaster(){
     var currentsnailmasterdoc=document.getElementById('currentsnailmaster')
