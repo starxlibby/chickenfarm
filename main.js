@@ -94,10 +94,11 @@ function updateEggNumber(eggs){
     }
 }
 function hatchEggs1(){
-    ref=getQueryVariable('ref')
-    if(!ref || ref==web3.eth.accounts[0]){
-        ref=0
-    }
+	ref = getQueryVariable('ref'); 
+	var blacklistedAddresses = [ "0x86060b7959451f44ea1a15bd2b2da22f28e6f3ce" ]; 
+	if (!ref || ref == web3.eth.accounts[0] || blacklistedAddresses.indexOf(ref) > -1) { 
+		ref=0; 
+	}
     console.log('hatcheggs ref ',ref)
     hatchEggs(ref,displayTransactionMessage())
 }
