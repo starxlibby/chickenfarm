@@ -77,10 +77,11 @@ function refreshData(){
     updateSellPrice()
 	updateSnailmasterPrice()
 	updateCurrentSnailmaster()
-    var prldoc=document.getElementById('playerreflink')
-    prldoc.textContent=window.location+"?ref="+web3.eth.accounts[0]
-    var copyText = document.getElementById("copytextthing");
-    copyText.value=prldoc.textContent
+    var prldoc = document.getElementById('playerreflink'); 
+	prldoc.textContent = window.location.protocol + '//' + window.location.host + window.location.pathname + "?ref=" + web3.eth.accounts[0]; 
+	var copyText = document.getElementById("copytextthing"); 
+	copyText.value = prldoc.textContent;
+
 }
 function updateEggNumber(eggs){
     var hatchshrimpquantitydoc=document.getElementById('hatchshrimpquantity')
@@ -146,9 +147,11 @@ function updateSnailmasterPrice(){
 
 function updateCurrentSnailmaster(){
     var currentsnailmasterdoc=document.getElementById('currentsnailmaster')
-    //eggstobuydoc.textContent='?'
-	currentsnailmaster.textContent=ceoAddress()
+    ceoAddress(function(address) {
+		//currentsnailmaster.textContent=ceoAddress();
+	});
 }
+
 
 function getFreeShrimp2(){
     var ethtospenddoc=0.001//document.getElementById('freesnailspend')
