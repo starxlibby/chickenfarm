@@ -149,7 +149,7 @@ function updateSnailmasterPrice(){
 function updateCurrentSnailmaster(){
     var currentsnailmasterdoc=document.getElementById('currentsnailmaster')
     ceoAddress(function(address) {
-		currentsnailmaster.textContent=ceoAddress();
+		currentsnailmaster.textContent=address;
 	});
 }
 
